@@ -3,7 +3,7 @@
     <h1>Select Template</h1>
     Create New Template:
     <input type="checkbox" ng-model="myVar">
-    <div ng-show="myVar" layout="column" layout-align="center center">
+    <div ng-show="myVar" layout="column" layout-align="center center" >
         <input ng-model=hc.createdTemplate.template_name type="text" placeholder="Template Name"></input>
         <input ng-model=hc.createdTemplate.text type="text" placeholder="Message"></input>
         <md-button ng-click="hc.createTemplate()">Create</md-button>
@@ -29,13 +29,16 @@
     hc.selectedGuest.roomnumber = guests.room_number ; 
     hc.selectedGuest.reservation = guests.reservation">{{guests.first_name}} {{guests.last_name}}</md-button>
 </div>
+
+<div layout= "column" layout-align="center center">
+    <h1>Your Message</h1>
 {{hc.selectedTimeOfDay}} {{hc.selectedGuest.first_name}} {{hc.selectedGuest.last_name}}
 <br>
 {{hc.selectedTemplate}}
 <br>
 Room Number : {{hc.selectedGuest.roomnumber}}
 <br>
- Reservation Number : {{hc.selectedGuest.reservation}}
+Reservation Number : {{hc.selectedGuest.reservation}}
 <br>
 <br>
 Sinsearly {{hc.selectedLocation.company}}
@@ -43,5 +46,7 @@ Sinsearly {{hc.selectedLocation.company}}
 <br>
 <br>
 <md-button>Send Messages</md-button>
+</div>
+</div>
 </div>
 </div>
